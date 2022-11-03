@@ -111,7 +111,16 @@ SELECT * FROM LavPopulasjon;
 
 -- -- -- SELECT Setninger -- -- --
 
+-- Viser artnavn, slik at spillere kan få en oversikt over mulige artvalg. Vises ved innlogging, på pauseskjermen, 
+SELECT ArtNavn
+FROM Arter;
 
+-- Viser info om brukeren, for eksempel for å se level til spillerene, oppdatert DisplayNavn og konstante BrukerID'en. 
+SELECT * FROM BrukerInfo;
+
+-- Viser alle valgene til spilleren, som knyttes opp mot BrukerID. Kan brukes av spillere for å få en komplett oversikt og sammenligne med andre spillere,
+-- men kan også være nyttig for utviklerene for å ha statistikk på hvor mange som valgte hva.
+SELECT * FROM Spillerfigur;
 
 
 
