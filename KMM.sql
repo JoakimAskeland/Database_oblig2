@@ -7,7 +7,7 @@ CREATE TABLE BrukerInfo (BrukerID SMALLINT AUTO_INCREMENT, DisplayNavn VARCHAR(2
 INSERT INTO BrukerInfo (DisplayNavn, BrukerLevel)
 VALUES ('AdminBruker', 99);
 
--- Adminbruker lagd. 
+-- Adminbruker lagd. --
 
 INSERT INTO BrukerInfo (DisplayNavn, BrukerLevel) VALUES
 ('GamerNr1', 1),
@@ -16,8 +16,6 @@ INSERT INTO BrukerInfo (DisplayNavn, BrukerLevel) VALUES
 ('Kristian', 13);
 
 -- -- -- ARTER -- -- --
-
-DROP TABLE Arter;
 
 CREATE TABLE Arter 
 (ArtNummer TINYINT AUTO_INCREMENT, ArtNavn VARCHAR(20), BasisHelse INT, AngrepSkade INT, Bevegelseshastighet INT, HjemmeVerden VARCHAR(20), PRIMARY KEY(ArtNummer));
@@ -44,7 +42,7 @@ INSERT INTO Maps (VerdenNavn, Biom, Populasjon, HjemmeArt) VALUES
 	('Polus', 'Arktisk', 2000, 'Amogi'),
 	('Sanghelios', 'Frodig', 20000000, 'Sangheili');
     
-    -- -- -- VÅPEN -- -- --
+-- -- -- VÅPEN -- -- --
     
     CREATE TABLE IF NOT EXISTS Vaapen (
     VaapenID SMALLINT AUTO_INCREMENT,
@@ -61,7 +59,7 @@ INSERT INTO Vaapen (VaapenNavn, VaapenKlasse, VaapenSkade, SkadeType, VaapenGrad
     ('Langsverd', 'Sverd', '7', 'Kuttende', 'Vanlig'),
     ('Pistol', 'Semi-automatisk', 1000000, 'Stikkende', 'Sjelden');
     
-    -- -- -- Klasser -- -- --
+-- -- -- Klasser -- -- --
     
 CREATE TABLE Klasser (PRIMARY KEY (Klassenr), Klassenr TINYINT AUTO_INCREMENT, Klassenavn VARCHAR(20), Skjold INT, Skadebonus INT);
 
@@ -119,9 +117,23 @@ SELECT * FROM LavPopulasjon;
 
 
 -- -- -- UPDATE OG INSERT setninger -- -- --
--- 
+-- Oppretting av ny bruker via c++ --
 /*
+prep_stmt = con->prepareStatement("INSERT INTO Brukerinfo(Displaynavn, brukerlevel) VALUES (?, ?)");
 
+string username = "PlayerUserName";
 
+prep_stmt->setString(1, username);
+prep_stmt->setInt(2, 1);
+prep_stmt->executeQuery();
+*/
 
+-- Oppdatering av art --
+/*
+prep_stmt = con->prepareStatement("UPDATE Spillerfigur(Artnummer) VALUES (?)");
+
+int artvalg = 2;
+
+prep_stmt->setInt(1, artvalg);
+prep_stmt->executeQuery();
 */
