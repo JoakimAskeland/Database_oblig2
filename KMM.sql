@@ -1,5 +1,7 @@
 -- Opretting av tabell BrukerINFO. Her lagres brukerinfo.
 
+-- -- -- BRUKER INFO -- -- --
+
 CREATE TABLE BrukerInfo (BrukerID SMALLINT AUTO_INCREMENT, DisplayNavn VARCHAR(20), BrukerLevel TINYINT, PRIMARY KEY(BrukerID));
 
 INSERT INTO BrukerInfo (DisplayNavn, BrukerLevel)
