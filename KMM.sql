@@ -72,6 +72,7 @@ INSERT INTO Klasser (Klassenavn, Skjold, Skadebonus) VALUES
 ('Tank', 5000, 300);
 
 -- -- -- Ting -- -- --
+
 CREATE TABLE IF NOT EXISTS Ting (
 	TingID SMALLINT AUTO_INCREMENT,
     TingNavn VARCHAR (20),
@@ -82,7 +83,6 @@ CREATE TABLE IF NOT EXISTS Ting (
 INSERT INTO Ting (TingNavn, BruksMaate, AntallBruk) VALUES
 	('Granat', 'Kastbar', 1),
     ('Eleksir', 'Drikkbar', 2);
-
 
 
 -- -- -- Spillerfigur -- -- --
@@ -97,9 +97,20 @@ CREATE TABLE Spillerfigur
     Klassenr TINYINT, FOREIGN KEY (Klassenr) REFERENCES Klasser(Klassenr)
 );
 
+-- Spillerfigur trigger tabell -- 
+
+CREATE TABLE Spillerfigur_endringer 
+(PRIMARY KEY (ID), ID TINYINT AUTO_INCREMENT, BrukerID SMALLINT, ArtNummer TINYINT, Klassenr TINYINT);
 
 
 
 
+-- -- -- VIEW -- -- --
 
+CREATE VIEW LavPopulasjon AS 
+SELECT VerdenNavn
+FROM Maps
+WHERE Populasjon < 3000000;
+
+SELECT * FROM LavPopulasjon;
 
