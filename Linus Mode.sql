@@ -60,5 +60,11 @@ CREATE TABLE IF NOT EXISTS Kart (
 
 CREATE TABLE IF NOT EXISTS Ting (
 	TingID SMALLINT AUTO_INCREMENT,
+    TingNavn VARCHAR (20),
+    BruksMaate VARCHAR (30),
+    AntallBruk TINYINT,
     PRIMARY KEY (TingID)
 );
+INSERT INTO Ting (TingNavn, BruksMaate, AntallBruk) VALUES
+	('Granat', 'Kastbar', 1),
+    ('Eleksir', 'Drikkbar', 2);
