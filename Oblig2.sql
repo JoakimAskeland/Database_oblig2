@@ -66,3 +66,15 @@ INSERT INTO Klasser (Klassenavn, Skjold, Skadebonus) VALUES
 ('Soldat', 1000, 1000),
 ('Snikmorder', 10, 5000),
 ('Tank', 5000, 300);
+
+-- -- -- Spillerfigur -- -- --
+
+CREATE TABLE Spillerfigur 
+(
+    BrukerID SMALLINT, FOREIGN KEY (BrukerID) REFERENCES BrukerInfo(BrukerID),
+    VaapenID SMALLINT, FOREIGN KEY (VaapenID) REFERENCES Vaapen(VaapenID),
+    ArtNummer TINYINT, FOREIGN KEY (ArtNummer) REFERENCES Arter(ArtNummer),
+    VerdenNr TINYINT, FOREIGN KEY (Maps) REFERENCES Maps(VerdenNr),
+    ItemID TINYINT, FOREIGN KEY (Items) REFERENCES Items(ItemID),
+    ClassID TINYINT, FOREIGN KEY (Classes) REFERENCES Classes(ClassID)
+);
