@@ -1,4 +1,0 @@
-CREATE PROCEDURE SeBrukerInfo ()
-BEGIN
-
-END
