@@ -1,5 +1,5 @@
-CREATE PROCEDURE ArtStats ()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `ArtStats`()
 BEGIN
 	SELECT ArtNavn, BasisHelse, AngrepSkade, Bevegelseshastighet
-    FROM Art;
+    FROM Arter;
 END
