@@ -102,9 +102,6 @@ CREATE TABLE Spillerfigur
 CREATE TABLE Spillerfigur_endringer 
 (PRIMARY KEY (ID), ID TINYINT AUTO_INCREMENT, BrukerID SMALLINT, ArtNummer TINYINT, Klassenr TINYINT);
 
-
-
-
 -- -- -- VIEW -- -- --
 
 CREATE VIEW LavPopulasjon AS 
@@ -114,3 +111,11 @@ WHERE Populasjon < 3000000;
 
 SELECT * FROM LavPopulasjon;
 
+-- -- -- SELECT Setninger -- -- --
+
+
+
+
+
+
+-- -- -- UPDATE OG INSERT setninger -- -- --
