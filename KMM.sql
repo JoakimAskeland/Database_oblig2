@@ -119,3 +119,9 @@ SELECT * FROM LavPopulasjon;
 
 
 -- -- -- UPDATE OG INSERT setninger -- -- --
+-- 
+/*
+
+
+
+*/
