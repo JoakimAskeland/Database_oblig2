@@ -118,6 +118,7 @@ SELECT * FROM LavPopulasjon;
 
 -- -- -- UPDATE OG INSERT setninger -- -- --
 -- Oppretting av ny bruker via c++ --
+-- Oppretting av bruker når spilleren starter spillet for første gang.
 /*
 prep_stmt = con->prepareStatement("INSERT INTO Brukerinfo(Displaynavn, brukerlevel) VALUES (?, ?)");
 
@@ -129,6 +130,7 @@ prep_stmt->executeQuery();
 */
 
 -- Oppdatering av art --
+-- Valg av art før spilleren starter en runde.
 /*
 prep_stmt = con->prepareStatement("UPDATE Spillerfigur(Artnummer) VALUES (?)");
 
