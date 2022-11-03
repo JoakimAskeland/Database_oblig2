@@ -56,3 +56,13 @@ INSERT INTO Maps (VerdenNavn, Biom, Populasjon, HjemmeArt) VALUES
     ('Gorro', 'Krigsherjet', 20000000, 'Ork'),
 	('Polus', 'Arktisk', 2000, 'Amogi'),
 	('Sanghelios', 'Frodig', 20000000, 'Sangheili');
+
+    -- -- -- Klasser -- -- --
+    
+CREATE TABLE Klasser (PRIMARY KEY (Klassenr), Klassenr TINYINT AUTO_INCREMENT, Klassenavn VARCHAR(20), Skjold INT, Skadebonus INT);
+
+INSERT INTO Klasser (Klassenavn, Skjold, Skadebonus) VALUES
+('Lege', 200, 10),
+('Soldat', 1000, 1000),
+('Snikmorder', 10, 5000),
+('Tank', 5000, 300);
