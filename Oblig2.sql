@@ -46,13 +46,13 @@ INSERT INTO Arter (ArtNavn, BasisHelse, AngrepSkade, Bevegelseshastighet, Hjemme
 ('Amogi', 200, 1000,  500, 'Polus'),
 ('Sangheili', 6000, 1500,  3500, 'Sanghelios');
 
-/*
+-- Navn er planetnavn brukt i spill, Biom er der spillets baner er, ikke nødvendigvis hele planeten, populasjon er for vår art.
 CREATE TABLE Maps (PRIMARY KEY (VerdenNr), VerdenNr TINYINT AUTO_INCREMENT, VerdenNavn VARCHAR(20), Biom VARCHAR(15), Populasjon INT, HjemmeArt VARCHAR(20));
 
 INSERT INTO Maps (VerdenNavn, Biom, Populasjon, HjemmeArt) VALUES
-(
-	('Jorden', 'Frodig', 7000000000, 'Menneske'),
-    ('Xenomorph Prime', 'Temperert', 5000000, 'Xenomorph')
-    ('Skaro', 'Radioaktiv audemark', 
-);
-*/
+	('Terra', 'Frodig', 7000000000, 'Human'),
+    ('LV-223', 'Temperert', 5000000, 'Xenomorph'),
+    ('Skaro', 'Radioaktiv audemark', 200000, 'Dalek'),
+    ('Gorro', 'Krigsherjet', 20000000, 'Ork'),
+	('Polus', 'Arktisk', 2000, 'Amogi'),
+	('Sanghelios', 'Frodig', 20000000, 'Sangheili');
